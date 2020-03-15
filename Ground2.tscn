@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets!/mainlev_build1.png" type="Texture" id=1]
+[ext_resource path="res://Assets!/parallaxBG-interior1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.8995, 15.5251 )
+
+[node name="Ground2" type="Node2D"]
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 709.397, 454.102 )
+scale = Vector2( 13.1238, 2.12842 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite11"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite11/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 512.268, 454.102 )
+scale = Vector2( 21.3376, 2.12842 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite13"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite13/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 621.083, 432.023 )
+rotation = 1.5708
+scale = Vector2( 2.12842, 2.12842 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite7"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 741.989, 432.023 )
+rotation = 1.5708
+scale = Vector2( 2.12842, 2.12842 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite9"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite9/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 741.989, 402.585 )
+rotation = 1.5708
+scale = Vector2( 3.355, 2.12842 )
+z_index = -1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite10"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite10/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 871.306, 359.48 )
+rotation = 1.5708
+scale = Vector2( 5.15106, 2.12842 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 400, 272, 48, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite12"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite12/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="parallaxBG-interior1" type="Sprite" parent="."]
+position = Vector2( 521.273, 160.268 )
+scale = Vector2( 4.10809, 4.10809 )
+z_index = -2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}

@@ -1,7 +1,7 @@
 extends Area2D
 
 
-const SPEED = 100
+const SPEED = 400
 var velocity = Vector2()
 
 func _physics_process(delta):

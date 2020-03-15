@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://Assets!/load button hover.png" type="Texture" id=2]
 [ext_resource path="res://Assets!/start button hover.png" type="Texture" id=3]
-[ext_resource path="res://Assets!/load button.png" type="Texture" id=4]
 [ext_resource path="res://Assets!/start button.png" type="Texture" id=5]
 [ext_resource path="res://Assets!/OPIUM.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets!/Child's Nightmare.ogg" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -35,24 +34,17 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="ColorRect"]
-margin_left = 251.063
-margin_top = 259.558
-margin_right = 451.063
-margin_bottom = 459.558
+margin_left = 399.063
+margin_top = 263.558
+margin_right = 599.063
+margin_bottom = 463.558
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="ColorRect"]
-margin_left = 598.399
-margin_top = 261.446
-margin_right = 798.399
-margin_bottom = 461.446
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 [connection signal="pressed" from="ColorRect/TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -51,7 +51,9 @@ text = "Your score is determined by how many times you died. The closer to 0, th
 
 Score: %s"
 align = 1
-percent_visible = -0.0135135
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Button" parent="."]
 margin_left = 447.424
@@ -62,10 +64,4 @@ text = "Play Again"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Quit" type="Button" parent="."]
-margin_left = 449.627
-margin_top = 408.0
-margin_right = 585.627
-margin_bottom = 456.0
-text = "Quit"
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]

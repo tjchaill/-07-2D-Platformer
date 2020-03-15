@@ -5,6 +5,7 @@ var motion = Vector2()
 export var gravity = 10
 export var jump_force = -400
 export var speed = 200
+var on_ground = false
 
 const FIREBALL = preload("res://Fireball.tscn")
 
@@ -17,16 +18,22 @@ func _physics_process(delta):
 		motion.y += gravity
 		if Input.is_action_pressed("ui_right"):
 			motion.x = speed
+			$AnimatedSprite.play("WALKING")
+			$AnimatedSprite.flip_h = false
 			
 		elif Input.is_action_pressed("ui_left"):
 			motion.x = -speed
+			$AnimatedSprite.play("WALKING")
+			$AnimatedSprite.flip_h = true
 			
 		else: 
 			motion.x = 0
+			$AnimatedSprite.stop()
 			
 		if is_on_floor():
 			if Input.is_action_just_pressed("ui_up"):
 				motion.y = jump_force
+				
 				
 		if Input.is_action_just_pressed("ui_focus_next"):
 			var fireball = FIREBALL.instance()
@@ -39,7 +46,7 @@ func _physics_process(delta):
 			for i in range(get_slide_count()):
 				if "Enemy" in get_slide_collision(i).collider.name:
 					dead()
-		
+					
 func dead():
 	is_dead = true
 	motion = Vector2(0,0)
